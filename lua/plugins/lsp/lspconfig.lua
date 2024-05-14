@@ -19,9 +19,7 @@ return {
     vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {})
     vim.keymap.set("n", "rn", vim.lsp.buf.rename, {})
 
-    -- Diagnostic keymaps
-    vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
-    vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
+    -- Diagnostic keymaps vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" }) vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
     vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
     vim.keymap.set("n", "<leader>D", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
@@ -52,6 +50,14 @@ return {
     })
 
     lspconfig["gopls"].setup({
+      capabilities = capabilities,
+    })
+
+    lspconfig["docker_compose_language_service"].setup({
+      capabilities = capabilities,
+    })
+
+    lspconfig["dockerls"].setup({
       capabilities = capabilities,
     })
   end,
