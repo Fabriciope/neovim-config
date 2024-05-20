@@ -18,7 +18,9 @@ require("lazy").setup({
   require("plugins.todo-comments"),
   require("plugins.indent-blankline"),
   require("plugins.lualine"),
+  require("plugins.barbar"),
   -- TODO: add numToStr/Comment.nvim
+  -- TODO: add notify pop up
 
   require("plugins.lsp.mason"),
   require("plugins.lsp.lspconfig"),

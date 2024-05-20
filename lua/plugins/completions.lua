@@ -51,6 +51,9 @@ return {
         { name = "path" }, -- file system paths
       }),
 
+      -- TODO: learn how make my own snippets
+      -- TODO: if err != nil {}
+
       -- configure lspkind for vs-code like pictograms in completion menu
       formatting = {
         format = lspkind.cmp_format({

@@ -15,13 +15,16 @@ return {
         lua = { "stylua" },
         go = { "goimports", "gofmt" },
         php = { "php_cs_fixer" },
+
+        sql = { "sqlfmt" },
       },
-      format_on_save = {
-        -- I recommend these options. See :help conform.format for details.
-        lsp_fallback = true,
-        async = false,
-        timeout_ms = 500,
-      },
+      format_on_save = false,
+      --      format_on_save = {
+      --        -- I recommend these options. See :help conform.format for details.
+      --        lsp_fallback = true,
+      --        async = false,
+      --        timeout_ms = 500,
+      --      },
     })
 
     vim.keymap.set({ "n", "v" }, "<tab>f", function()

@@ -66,12 +66,12 @@ vim.opt.listchars = {
   --eol = "↲",
   eol = "⤶",
   --tab = "▸ ",
-  tab = "│ ", -- tab requires a string of two characters
-  extends = "»",
-  precedes = "«",
-  trail = "·",
-  space = " ",
-  nbsp = "␣",
+   tab = "│ ", -- tab requires a string of two characters
+  --  extends = "»",
+  -- precedes = "«",
+  -- trail = "·",
+  -- space = " ",
+  -- nbsp = "␣",
 }
 
 vim.opt.tabstop = 4 -- Show existing tab with 4 spaces width
