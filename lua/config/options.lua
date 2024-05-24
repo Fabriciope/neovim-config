@@ -63,10 +63,10 @@ vim.opt.list = true
 --vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.listchars = {
   --eol = "¬",
-  --eol = "↲",
-  eol = "⤶",
+  eol = "↲",
+  --eol = "⤶",
   --tab = "▸ ",
-   tab = "│ ", -- tab requires a string of two characters
+  tab = "│ ", -- tab requires a string of two characters
   --  extends = "»",
   -- precedes = "«",
   -- trail = "·",
