@@ -3,6 +3,7 @@ return {
   dependencies = {
     "williamboman/mason-lspconfig.nvim",
     "WhoIsSethDaniel/mason-tool-installer.nvim",
+    "neovim/nvim-lspconfig",
   },
   config = function()
     local mason = require("mason")
@@ -29,6 +30,7 @@ return {
         "tsserver",
         "intelephense",
         "gopls",
+        "jdtls",
 
         "sqlls",
 
@@ -38,6 +40,7 @@ return {
         "jsonls",
         "bashls",
       },
+
       -- aoto-install configured servers (with lspconfig)
       automatic_installation = true, -- not he same as ensure_installed
     })
@@ -46,6 +49,13 @@ return {
     mason_tool_installer.setup({
       ensure_installed = {
         -- TODO: add linters and formatters
+      },
+    })
+
+    require("mason-tool-installer").setup({
+      ensure_installed = {
+        "java-debug-adapter",
+        "java-test",
       },
     })
   end,
