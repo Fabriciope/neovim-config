@@ -19,6 +19,7 @@ require("lazy").setup({
   require("plugins.indent-blankline"),
   require("plugins.lualine"),
   require("plugins.barbar"),
+  require("plugins.toggleterm"),
   -- TODO: add numToStr/Comment.nvim
   -- TODO: add notify pop up
 
