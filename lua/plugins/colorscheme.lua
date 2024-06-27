@@ -8,7 +8,7 @@ return {
         compile = false, -- enable compiling the colorscheme
         undercurl = true, -- enable undercurls
         commentStyle = { italic = true, bold = false },
-        functionStyle = { bold = true },
+        functionStyle = { bold = false },
         keywordStyle = { italic = false, bold = false },
         statementStyle = { bold = true },
         typeStyle = { bold = false },
@@ -17,9 +17,9 @@ return {
         terminalColors = true, -- define vim.g.terminal_color_{0,17}
         colors = { -- add/modify theme and palette colors
           palette = {
-            sumiInk3 = "#10101a", -- bg main
+            sumiInk3 = "#111114", -- bg main
             --   sumiInk4 = "#141414",    -- barra dos numeros laterais
-            --sumiInk4 = "none", -- barra dos numeros laterais
+            sumiInk4 = "#181821", -- barra dos numeros laterais
             --   sumiInk5 = "#1a1a21",    -- hover ao navegar pelos arquivos
             sumiInk5 = "#18181c", -- hover ao navegar pelos arquivos
             --   oldWhite = "#DCD7BA",    -- :
@@ -65,8 +65,7 @@ return {
     "ellisonleao/gruvbox.nvim",
     priority = 1000,
     opts = {},
-    config = function()
-    end,
+    config = function() end,
   },
   {
     "rose-pine/neovim",
