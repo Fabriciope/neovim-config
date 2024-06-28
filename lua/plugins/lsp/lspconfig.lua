@@ -55,6 +55,15 @@ return {
       capabilities = capabilities,
     })
 
+    lspconfig["intelephense"].setup({
+      capabilities = capabilities,
+      filetypes = { "php", "blade" },
+      files = {
+        associations = { "*.php", "*.blade.php" }, -- Associating .blade.php files as well
+        maxSize = 5000000,
+      },
+    })
+
     lspconfig["docker_compose_language_service"].setup({
       capabilities = capabilities,
     })

@@ -15,6 +15,7 @@ return {
         lua = { "stylua" },
         go = { "goimports", "gofmt" },
         php = { "php_cs_fixer" },
+        blade = { "blade-formatter", "rustywind" },
 
         sql = { "sqlfmt" },
       },
