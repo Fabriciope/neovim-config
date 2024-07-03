@@ -22,23 +22,21 @@ return {
     mason_lspconfig.setup({
       -- list of server for mason to install
       ensure_installed = {
+        "gopls",
+        "intelephense",
+        "tsserver",
+
+        "docker_compose_language_service",
+        "dockerls",
+        "yamlls",
+        "jsonls",
+        "bashls",
+        "sqlls",
+
         "lua_ls",
         "html",
         "cssls",
         "tailwindcss",
-
-        "tsserver",
-        "intelephense",
-        "gopls",
-        "jdtls",
-
-        "sqlls",
-
-        "dockerls",
-        "docker_compose_language_service",
-        "yamlls",
-        "jsonls",
-        "bashls",
       },
 
       -- aoto-install configured servers (with lspconfig)
@@ -49,13 +47,6 @@ return {
     mason_tool_installer.setup({
       ensure_installed = {
         -- TODO: add linters and formatters
-      },
-    })
-
-    require("mason-tool-installer").setup({
-      ensure_installed = {
-        "java-debug-adapter",
-        "java-test",
       },
     })
   end,

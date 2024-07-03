@@ -26,7 +26,6 @@ require("lazy").setup({
   require("plugins.lsp.mason"),
   require("plugins.lsp.lspconfig"),
   require("plugins.completions"),
-  require("plugins.lsp.jdtls"),
 
   require("plugins.formatting"),
   require("plugins.linting"),

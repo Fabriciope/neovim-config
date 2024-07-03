@@ -9,6 +9,7 @@ return { -- Highlight, edit, and navigate code
     local opts = {
       --ensure_installed = { "html", "css", "javascript", 'bash', 'c', 'diff', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc', "php", "go", "gomod", "gotmpl", "sql", "json"},
       -- Autoinstall languages that are not installed
+      ensure_installed = "blade",
       auto_install = true,
       highlight = {
         enable = true,
@@ -19,6 +20,15 @@ return { -- Highlight, edit, and navigate code
       },
       sync_install = false,
       indent = { enable = true },
+    }
+    local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+    parser_config.blade = {
+      install_info = {
+        url = "https://github.com/EmranMR/tree-sitter-blade",
+        files = { "src/parser.c" },
+        branch = "main",
+      },
+      filetype = "blade",
     }
 
     configs.setup(opts)

@@ -20,20 +20,13 @@ return {
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
     end
 
-    -- call setup on each lsp server
-    local mason_lspconfig = require("mason-lspconfig")
-    mason_lspconfig.setup_handlers({
-      function(server_name)
-        if server_name ~= "jdtls" then
-          require("lspconfig")[server_name].setup({
-            capabilities = capabilities,
-          })
-        end
-      end,
-    })
-
     lspconfig["html"].setup({
       capabilities = capabilities,
+      filetypes = { "html", "blade" },
+      files = {
+        associations = { "*.html", "*.blade.php" }, -- Associating .blade.php files as well
+        maxSize = 5000000,
+      },
     })
 
     lspconfig["lua_ls"].setup({
@@ -55,6 +48,14 @@ return {
       capabilities = capabilities,
     })
 
+    lspconfig["html"].setup({
+      capabilities = capabilities,
+    })
+
+    lspconfig["tsserver"].setup({
+      capabilities = capabilities,
+    })
+
     lspconfig["intelephense"].setup({
       capabilities = capabilities,
       filetypes = { "php", "blade" },
@@ -70,6 +71,11 @@ return {
 
     lspconfig["dockerls"].setup({
       capabilities = capabilities,
+    })
+
+    lspconfig["tailwindcss"].setup({
+      capabilities = capabilities,
+      filetypes = { "html", "php", "blade" },
     })
   end,
 }
